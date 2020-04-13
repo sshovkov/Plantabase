@@ -28,13 +28,13 @@
 		797B949A2426DFCB00AF1311 /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 797B94902426DFCB00AF1311 /* OpenSans-ExtraBoldItalic.ttf */; };
 		797B949B2426DFCB00AF1311 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 797B94912426DFCB00AF1311 /* OpenSans-Regular.ttf */; };
 		797B949C2426DFCB00AF1311 /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 797B94922426DFCB00AF1311 /* OpenSans-BoldItalic.ttf */; };
-		797B949E2426E20A00AF1311 /* Launch Plants.png in Resources */ = {isa = PBXBuildFile; fileRef = 797B949D2426E20A00AF1311 /* Launch Plants.png */; };
-		797B94A12426E28400AF1311 /* iPhone 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 797B94A02426E28400AF1311 /* iPhone 1.png */; };
 		797B94A62426E43600AF1311 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797B94A52426E43600AF1311 /* MapViewController.swift */; };
 		797B94A82426E58500AF1311 /* CreateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797B94A72426E58500AF1311 /* CreateProfileViewController.swift */; };
 		797B94AC2426F22600AF1311 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797B94AB2426F22600AF1311 /* ProfileViewController.swift */; };
-		797B94AE2426F2D200AF1311 /* default profile picture.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 797B94AD2426F2D200AF1311 /* default profile picture.jpeg */; };
 		7996D7242443F7EF00284586 /* Home  Art.png in Resources */ = {isa = PBXBuildFile; fileRef = 7996D7232443F7EF00284586 /* Home  Art.png */; };
+		79D77B622444EFE1000663CD /* plant girl.png in Resources */ = {isa = PBXBuildFile; fileRef = 79D77B612444EFE0000663CD /* plant girl.png */; };
+		79D77B6D2444FE8D000663CD /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D77B6B2444FE8D000663CD /* User+CoreDataClass.swift */; };
+		79D77B6E2444FE8D000663CD /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D77B6C2444FE8D000663CD /* User+CoreDataProperties.swift */; };
 		79F3FE002426F4C0008A306A /* SavedPlantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F3FDFF2426F4C0008A306A /* SavedPlantsViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -62,14 +62,14 @@
 		797B94902426DFCB00AF1311 /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		797B94912426DFCB00AF1311 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		797B94922426DFCB00AF1311 /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
-		797B949D2426E20A00AF1311 /* Launch Plants.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Launch Plants.png"; path = "../../../../Downloads/Launch Plants.png"; sourceTree = "<group>"; };
 		797B949F2426E20E00AF1311 /* Launch Plants.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Launch Plants.png"; sourceTree = "<group>"; };
-		797B94A02426E28400AF1311 /* iPhone 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPhone 1.png"; path = "../../../../Documents/ASU/CSE 335/Final Project/UI Mockups/iPhone 1.png"; sourceTree = "<group>"; };
 		797B94A52426E43600AF1311 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		797B94A72426E58500AF1311 /* CreateProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileViewController.swift; sourceTree = "<group>"; };
 		797B94AB2426F22600AF1311 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		797B94AD2426F2D200AF1311 /* default profile picture.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "default profile picture.jpeg"; path = "../../../Downloads/default profile picture.jpeg"; sourceTree = "<group>"; };
 		7996D7232443F7EF00284586 /* Home  Art.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Home  Art.png"; path = "Pictures/Home  Art.png"; sourceTree = SOURCE_ROOT; };
+		79D77B612444EFE0000663CD /* plant girl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "plant girl.png"; path = "Pictures/plant girl.png"; sourceTree = SOURCE_ROOT; };
+		79D77B6B2444FE8D000663CD /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		79D77B6C2444FE8D000663CD /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		79F3FDFF2426F4C0008A306A /* SavedPlantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPlantsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,24 +113,24 @@
 		797B94612426DDC900AF1311 /* Plantabase */ = {
 			isa = PBXGroup;
 			children = (
+				797B94682426DDC900AF1311 /* Main.storyboard */,
 				797B94662426DDC900AF1311 /* ViewController.swift */,
 				797B94A52426E43600AF1311 /* MapViewController.swift */,
-				797B94682426DDC900AF1311 /* Main.storyboard */,
 				796B334C2444347400B44288 /* DetailViewController.swift */,
-				796B334A2444105500B44288 /* ItemTableViewCell.swift */,
+				797B94A72426E58500AF1311 /* CreateProfileViewController.swift */,
 				79F3FDFF2426F4C0008A306A /* SavedPlantsViewController.swift */,
 				797B94AB2426F22600AF1311 /* ProfileViewController.swift */,
-				797B94A72426E58500AF1311 /* CreateProfileViewController.swift */,
+				79D77B6B2444FE8D000663CD /* User+CoreDataClass.swift */,
 				796B33462444089600B44288 /* items.swift */,
+				796B334A2444105500B44288 /* ItemTableViewCell.swift */,
 				797B946E2426DDC900AF1311 /* Assets.xcassets */,
 				797B94702426DDC900AF1311 /* LaunchScreen.storyboard */,
 				797B94622426DDC900AF1311 /* AppDelegate.swift */,
 				797B94642426DDC900AF1311 /* SceneDelegate.swift */,
-				797B94AD2426F2D200AF1311 /* default profile picture.jpeg */,
-				7996D7232443F7EF00284586 /* Home  Art.png */,
-				797B949F2426E20E00AF1311 /* Launch Plants.png */,
+				79D77B6C2444FE8D000663CD /* User+CoreDataProperties.swift */,
 				797B94732426DDC900AF1311 /* Info.plist */,
 				797B946B2426DDC900AF1311 /* Plantabase.xcdatamodeld */,
+				79D77B632444FACC000663CD /* Images */,
 				797B94882426DFCB00AF1311 /* Open Sans Font */,
 			);
 			path = Plantabase;
@@ -139,8 +139,6 @@
 		797B94882426DFCB00AF1311 /* Open Sans Font */ = {
 			isa = PBXGroup;
 			children = (
-				797B94A02426E28400AF1311 /* iPhone 1.png */,
-				797B949D2426E20A00AF1311 /* Launch Plants.png */,
 				797B94892426DFCB00AF1311 /* OpenSans-SemiBold.ttf */,
 				797B948A2426DFCB00AF1311 /* OpenSans-Light.ttf */,
 				797B948B2426DFCB00AF1311 /* OpenSans-Italic.ttf */,
@@ -153,6 +151,16 @@
 				797B94922426DFCB00AF1311 /* OpenSans-BoldItalic.ttf */,
 			);
 			path = "Open Sans Font";
+			sourceTree = "<group>";
+		};
+		79D77B632444FACC000663CD /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				7996D7232443F7EF00284586 /* Home  Art.png */,
+				79D77B612444EFE0000663CD /* plant girl.png */,
+				797B949F2426E20E00AF1311 /* Launch Plants.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,17 +224,15 @@
 				7996D7242443F7EF00284586 /* Home  Art.png in Resources */,
 				797B94942426DFCB00AF1311 /* OpenSans-Light.ttf in Resources */,
 				797B94722426DDC900AF1311 /* LaunchScreen.storyboard in Resources */,
-				797B94A12426E28400AF1311 /* iPhone 1.png in Resources */,
-				797B94AE2426F2D200AF1311 /* default profile picture.jpeg in Resources */,
 				797B94962426DFCB00AF1311 /* OpenSans-ExtraBold.ttf in Resources */,
 				797B94932426DFCB00AF1311 /* OpenSans-SemiBold.ttf in Resources */,
 				797B946F2426DDC900AF1311 /* Assets.xcassets in Resources */,
 				797B946A2426DDC900AF1311 /* Main.storyboard in Resources */,
 				797B949A2426DFCB00AF1311 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
-				797B949E2426E20A00AF1311 /* Launch Plants.png in Resources */,
 				797B94952426DFCB00AF1311 /* OpenSans-Italic.ttf in Resources */,
 				797B94992426DFCB00AF1311 /* OpenSans-SemiBoldItalic.ttf in Resources */,
 				797B949C2426DFCB00AF1311 /* OpenSans-BoldItalic.ttf in Resources */,
+				79D77B622444EFE1000663CD /* plant girl.png in Resources */,
 				797B94982426DFCB00AF1311 /* OpenSans-Bold.ttf in Resources */,
 				797B949B2426DFCB00AF1311 /* OpenSans-Regular.ttf in Resources */,
 				797B94972426DFCB00AF1311 /* OpenSans-LightItalic.ttf in Resources */,
@@ -242,6 +248,7 @@
 			files = (
 				796B334D2444347400B44288 /* DetailViewController.swift in Sources */,
 				797B94672426DDC900AF1311 /* ViewController.swift in Sources */,
+				79D77B6D2444FE8D000663CD /* User+CoreDataClass.swift in Sources */,
 				797B94632426DDC900AF1311 /* AppDelegate.swift in Sources */,
 				796B334B2444105500B44288 /* ItemTableViewCell.swift in Sources */,
 				796B33472444089600B44288 /* items.swift in Sources */,
@@ -249,6 +256,7 @@
 				797B94A62426E43600AF1311 /* MapViewController.swift in Sources */,
 				797B94AC2426F22600AF1311 /* ProfileViewController.swift in Sources */,
 				797B94A82426E58500AF1311 /* CreateProfileViewController.swift in Sources */,
+				79D77B6E2444FE8D000663CD /* User+CoreDataProperties.swift in Sources */,
 				79F3FE002426F4C0008A306A /* SavedPlantsViewController.swift in Sources */,
 				797B94652426DDC900AF1311 /* SceneDelegate.swift in Sources */,
 			);

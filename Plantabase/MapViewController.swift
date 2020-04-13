@@ -65,11 +65,11 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
 //        let coordinate = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
 //        let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
 //        let region = MKCoordinateRegion(center: coordinate, span: span)
-//        
+//
 //        let annotation = MKPointAnnotation()
 //        annotation.coordinate = coordinate
 //        self.map.addAnnotation(annotation)
-//        
+//
 //        map.setRegion(region, animated: true)
 //    }
     
@@ -133,9 +133,16 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     }
     
     func createAnnotations (matchingItems: [MKMapItem]) {
+        var theURL = URL(string: "https://www.google.com")
         // for every item in the matchingItems array, create an annotation pin
         for i in 0...matchingItems.count - 1 {
             let place = matchingItems[i].placemark
+            let phoneNumber = String(matchingItems[i].phoneNumber!)
+            
+            if matchingItems[i].url != nil {
+                theURL = matchingItems[i].url
+            } 
+            
             let lat : CLLocationDegrees = (place.location?.coordinate.latitude)!
             let lon : CLLocationDegrees = (place.location?.coordinate.longitude)!
             let coordinates = CLLocationCoordinate2D(latitude: lat, longitude: lon)
@@ -147,13 +154,14 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             self.map.addAnnotation(annotation)
             
             // add all the results from the annotations to the items array
-            let f4 = item(itName: place.name!)
+            let f4 = item(itName: place.name!, itLat: lat, itLon: lon, phoNum: phoneNumber, itURL: theURL!)
             self.myItemList.items.append(f4)
             let indexPath = IndexPath (row: self.myItemList.items.count - 1, section: 0)
             self.itemsTable.beginUpdates()
             self.itemsTable.insertRows(at: [indexPath], with: .automatic)
             self.itemsTable.endUpdates()
         }
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -114,13 +114,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OOt-AD-GHv">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e.g., Sophia Shovkovy" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OOt-AD-GHv">
                                 <rect key="frame" x="38" y="282" width="338" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="37Y-zl-hxc">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e.g., Monstera Deliciosa" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="37Y-zl-hxc">
                                 <rect key="frame" x="34" y="390" width="338" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -136,6 +136,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="uploadProfilePicButton:" destination="Ef8-mY-aA4" eventType="touchUpInside" id="a9d-ME-sYS"/>
                                     <segue destination="Skm-TA-j49" kind="show" id="Va6-Zl-aKJ"/>
                                 </connections>
                             </button>
@@ -144,6 +145,10 @@
                         <viewLayoutGuide key="safeArea" id="dey-fC-cmR"/>
                     </view>
                     <navigationItem key="navigationItem" id="ZaS-HM-0JS"/>
+                    <connections>
+                        <outlet property="nameField" destination="OOt-AD-GHv" id="1Rq-EE-Eam"/>
+                        <outlet property="plantField" destination="37Y-zl-hxc" id="H1X-YV-msn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bOo-k4-Pek" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -224,7 +229,7 @@
                                     <segue destination="Rpz-Mc-MzE" kind="show" id="71v-Zl-jGV"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="default profile picture.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="Nxb-xP-OOC">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nxb-xP-OOC">
                                 <rect key="frame" x="107" y="123" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -425,6 +430,50 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wkW-qw-JHJ">
+                                <rect key="frame" x="13" y="366" width="374" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbi-Ld-Kjp">
+                                <rect key="frame" x="85" y="467" width="245" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.44874525069999999" green="0.88335525989999997" blue="0.63778525590000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="28"/>
+                                <state key="normal" title="Go to Website">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToWebsiteButton:" destination="ZEW-xF-hGh" eventType="touchUpInside" id="0Pl-gL-f5k"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3qs-8P-tIY">
+                                <rect key="frame" x="20" y="175" width="76" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="20"/>
+                                <color key="textColor" red="0.53708809609999997" green="0.54565566779999997" blue="0.50979983809999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fMp-na-jby">
+                                <rect key="frame" x="13" y="334" width="60" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="20"/>
+                                <color key="textColor" red="0.53708809609999997" green="0.54565566779999997" blue="0.50979983809999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="plant girl.png" translatesAutoresizingMaskIntoConstraints="NO" id="iUi-Fr-8BS">
+                                <rect key="frame" x="0.0" y="570" width="424" height="326"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DCf-Mg-vnq">
+                                <rect key="frame" x="20" y="192" width="374" height="87"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="XGa-Rx-dXV"/>
@@ -433,7 +482,10 @@
                         <barButtonItem key="rightBarButtonItem" title="Save" image="bookmark" catalog="system" id="klw-NC-3tX"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="address" destination="DCf-Mg-vnq" id="ATE-Ts-31a"/>
                         <outlet property="itemName" destination="fdg-sd-Qgj" id="Wbj-yx-zrg"/>
+                        <outlet property="phone" destination="wkW-qw-JHJ" id="MSt-IA-Mp4"/>
+                        <outlet property="websiteButton" destination="fbi-Ld-Kjp" id="IYg-5G-jJe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XBz-0c-n6u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -444,6 +496,6 @@
     <resources>
         <image name="Home  Art.png" width="638.727294921875" height="638.727294921875"/>
         <image name="bookmark" catalog="system" width="112" height="128"/>
-        <image name="default profile picture.jpeg" width="634" height="951"/>
+        <image name="plant girl.png" width="638.727294921875" height="638.727294921875"/>
     </resources>
 </document>

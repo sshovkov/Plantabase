@@ -8,23 +8,29 @@
 
 import UIKit
 
-class CreateProfileViewController: UIViewController {
+class CreateProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var plantField: UITextField!
+    
+    let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var userModel:UserEntity?
+    
+    
+    // Array to store User entities from the coredata
+    var fetchResults = [UserEntity]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        userModel = UserEntity(context: managedObjectContext)
+    
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func uploadProfilePicButton(_ sender: UIButton) {
+        userModel?.SaveContext(name: nameField.text!, favePlant: plantField.text!)
     }
-    */
+    
+    
+    
 
 }
