@@ -8,10 +8,17 @@
 
 import UIKit
 
+// view controller of launch page
+
 class ViewController: UIViewController {
 
+    @IBOutlet weak var findNurseryButton: UIButton!
+    @IBOutlet weak var goToProfileButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        findNurseryButton.layer.cornerRadius = 25
+        goToProfileButton.layer.cornerRadius = 25
         // Do any additional setup after loading the view.
     }
 
