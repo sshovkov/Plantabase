@@ -12,15 +12,18 @@ import CoreLocation
 
 // view controller for map view where user can search for plant nurseries
 
-class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var searchField: UITextField!
     @IBOutlet weak var mapType: UISegmentedControl!
     @IBOutlet weak var map: MKMapView!
     
+    @IBOutlet weak var itemsTable: UITableView!
+    
     let manager: CLLocationManager = CLLocationManager()
     let homeCoordinates = CLLocationCoordinate2D(latitude: 33.451350, longitude: -111.965550)
+    var myItemList:items = items()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,8 +43,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         })
         // Do any additional setup after loading the view.
     }
-    
-    
     
     func displayMap (latInput: CLLocationDegrees, lonInput: CLLocationDegrees) {
         // display the map
@@ -76,6 +77,9 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     @IBAction func search(_ sender: UIButton) {
         // remove existing annotations to update map only with what is being searched
         map.removeAnnotations(map.annotations)
+        // clear all items from any previous searches
+        self.myItemList.items.removeAll()
+        itemsTable.reloadData()
         
         let request = MKLocalSearch.Request()
         request.naturalLanguageQuery = self.searchField.text //"Plant Stand of Arizona"
@@ -107,25 +111,44 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             annotation.coordinate = coordinates
             annotation.title = place.name
             self.map.addAnnotation(annotation)
+            
+            // add all the results from the annotations to the items array
+            let f4 = item(itName: place.name!)
+            self.myItemList.items.append(f4)
+            let indexPath = IndexPath (row: self.myItemList.items.count - 1, section: 0)
+            self.itemsTable.beginUpdates()
+            self.itemsTable.insertRows(at: [indexPath], with: .automatic)
+            self.itemsTable.endUpdates()
         }
     }
     
-    class func isLocationServiceEnabled() -> Bool {
-        if CLLocationManager.locationServicesEnabled() {
-            switch(CLLocationManager.authorizationStatus()) {
-            case .notDetermined, .restricted, .denied:
-                return false
-            case .authorizedAlways, .authorizedWhenInUse:
-                return true
-            default:
-                print("Something wrong with Location services")
-                return false
-            }
-        } else {
-            print("Location services are not enabled")
-            return false
-        }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return myItemList.items.count
     }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "itemCell", for: indexPath) as! ItemTableViewCell
+        cell.layer.borderWidth = 0.5
+        cell.itemTitle.text = myItemList.items[indexPath.row].itemName
+        return cell
+    }
+    
+//    class func isLocationServiceEnabled() -> Bool {
+//        if CLLocationManager.locationServicesEnabled() {
+//            switch(CLLocationManager.authorizationStatus()) {
+//            case .notDetermined, .restricted, .denied:
+//                return false
+//            case .authorizedAlways, .authorizedWhenInUse:
+//                return true
+//            default:
+//                print("Something wrong with Location services")
+//                return false
+//            }
+//        } else {
+//            print("Location services are not enabled")
+//            return false
+//        }
+//    }
     
     // This goes inside of viewDidLoad
     //        manager.delegate = self

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		791527A42443EE4C0006F1A0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 791527A32443EE4C0006F1A0 /* CoreLocation.framework */; };
+		796B33472444089600B44288 /* items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796B33462444089600B44288 /* items.swift */; };
+		796B334B2444105500B44288 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796B334A2444105500B44288 /* ItemTableViewCell.swift */; };
 		797B94632426DDC900AF1311 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797B94622426DDC900AF1311 /* AppDelegate.swift */; };
 		797B94652426DDC900AF1311 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797B94642426DDC900AF1311 /* SceneDelegate.swift */; };
 		797B94672426DDC900AF1311 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797B94662426DDC900AF1311 /* ViewController.swift */; };
@@ -27,7 +29,6 @@
 		797B949C2426DFCB00AF1311 /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 797B94922426DFCB00AF1311 /* OpenSans-BoldItalic.ttf */; };
 		797B949E2426E20A00AF1311 /* Launch Plants.png in Resources */ = {isa = PBXBuildFile; fileRef = 797B949D2426E20A00AF1311 /* Launch Plants.png */; };
 		797B94A12426E28400AF1311 /* iPhone 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 797B94A02426E28400AF1311 /* iPhone 1.png */; };
-		797B94A42426E32B00AF1311 /* Welcome Screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 797B94A32426E32B00AF1311 /* Welcome Screen.png */; };
 		797B94A62426E43600AF1311 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797B94A52426E43600AF1311 /* MapViewController.swift */; };
 		797B94A82426E58500AF1311 /* CreateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797B94A72426E58500AF1311 /* CreateProfileViewController.swift */; };
 		797B94AC2426F22600AF1311 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797B94AB2426F22600AF1311 /* ProfileViewController.swift */; };
@@ -38,6 +39,8 @@
 
 /* Begin PBXFileReference section */
 		791527A32443EE4C0006F1A0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		796B33462444089600B44288 /* items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = items.swift; sourceTree = "<group>"; };
+		796B334A2444105500B44288 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		797B945F2426DDC900AF1311 /* Plantabase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Plantabase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		797B94622426DDC900AF1311 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		797B94642426DDC900AF1311 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,7 +63,6 @@
 		797B949D2426E20A00AF1311 /* Launch Plants.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Launch Plants.png"; path = "../../../../Downloads/Launch Plants.png"; sourceTree = "<group>"; };
 		797B949F2426E20E00AF1311 /* Launch Plants.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Launch Plants.png"; sourceTree = "<group>"; };
 		797B94A02426E28400AF1311 /* iPhone 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPhone 1.png"; path = "../../../../Documents/ASU/CSE 335/Final Project/UI Mockups/iPhone 1.png"; sourceTree = "<group>"; };
-		797B94A32426E32B00AF1311 /* Welcome Screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Welcome Screen.png"; path = "../../../Downloads/Welcome Screen.png"; sourceTree = "<group>"; };
 		797B94A52426E43600AF1311 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		797B94A72426E58500AF1311 /* CreateProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileViewController.swift; sourceTree = "<group>"; };
 		797B94AB2426F22600AF1311 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -112,19 +114,20 @@
 				797B94662426DDC900AF1311 /* ViewController.swift */,
 				797B94A52426E43600AF1311 /* MapViewController.swift */,
 				797B94682426DDC900AF1311 /* Main.storyboard */,
+				796B334A2444105500B44288 /* ItemTableViewCell.swift */,
 				79F3FDFF2426F4C0008A306A /* SavedPlantsViewController.swift */,
 				797B94AB2426F22600AF1311 /* ProfileViewController.swift */,
 				797B94A72426E58500AF1311 /* CreateProfileViewController.swift */,
+				796B33462444089600B44288 /* items.swift */,
+				797B946E2426DDC900AF1311 /* Assets.xcassets */,
 				797B94702426DDC900AF1311 /* LaunchScreen.storyboard */,
 				797B94622426DDC900AF1311 /* AppDelegate.swift */,
 				797B94642426DDC900AF1311 /* SceneDelegate.swift */,
 				797B94AD2426F2D200AF1311 /* default profile picture.jpeg */,
 				7996D7232443F7EF00284586 /* Home  Art.png */,
 				797B949F2426E20E00AF1311 /* Launch Plants.png */,
-				797B94A32426E32B00AF1311 /* Welcome Screen.png */,
 				797B94732426DDC900AF1311 /* Info.plist */,
 				797B946B2426DDC900AF1311 /* Plantabase.xcdatamodeld */,
-				797B946E2426DDC900AF1311 /* Assets.xcassets */,
 				797B94882426DFCB00AF1311 /* Open Sans Font */,
 			);
 			path = Plantabase;
@@ -209,7 +212,6 @@
 			files = (
 				7996D7242443F7EF00284586 /* Home  Art.png in Resources */,
 				797B94942426DFCB00AF1311 /* OpenSans-Light.ttf in Resources */,
-				797B94A42426E32B00AF1311 /* Welcome Screen.png in Resources */,
 				797B94722426DDC900AF1311 /* LaunchScreen.storyboard in Resources */,
 				797B94A12426E28400AF1311 /* iPhone 1.png in Resources */,
 				797B94AE2426F2D200AF1311 /* default profile picture.jpeg in Resources */,
@@ -237,6 +239,8 @@
 			files = (
 				797B94672426DDC900AF1311 /* ViewController.swift in Sources */,
 				797B94632426DDC900AF1311 /* AppDelegate.swift in Sources */,
+				796B334B2444105500B44288 /* ItemTableViewCell.swift in Sources */,
+				796B33472444089600B44288 /* items.swift in Sources */,
 				797B946D2426DDC900AF1311 /* Plantabase.xcdatamodeld in Sources */,
 				797B94A62426E43600AF1311 /* MapViewController.swift in Sources */,
 				797B94AC2426F22600AF1311 /* ProfileViewController.swift in Sources */,
