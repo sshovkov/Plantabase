@@ -133,6 +133,17 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let selectedIndex: IndexPath = self.itemsTable.indexPath(for: sender as! UITableViewCell)!
+        let item = myItemList.items[selectedIndex.row]
+        
+        if (segue.identifier == "toDetailViewController"){
+            if let viewController: DetailViewController = segue.destination as? DetailViewController {
+                viewController.selectedItem = item
+            }
+        }
+    }
+    
 //    class func isLocationServiceEnabled() -> Bool {
 //        if CLLocationManager.locationServicesEnabled() {
 //            switch(CLLocationManager.authorizationStatus()) {

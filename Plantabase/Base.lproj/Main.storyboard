@@ -314,25 +314,25 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemCell" rowHeight="43" id="o4s-XK-Nq9" customClass="ItemTableViewCell" customModule="Plantabase" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemCell" id="o4s-XK-Nq9" customClass="ItemTableViewCell" customModule="Plantabase" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="o4s-XK-Nq9" id="1te-Fg-O3J">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name of Plant Shop" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTD-Vs-Ci9">
-                                                    <rect key="frame" x="20" y="7" width="369" height="30"/>
+                                                    <rect key="frame" x="20" y="6" width="369" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="18"/>
-                                                    <color key="textColor" red="0.39608412980000002" green="0.3960680962" blue="0.39607897399999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    <color key="highlightedColor" red="0.23967987299999999" green="0.85845357180000004" blue="0.57643121480000004" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="highlightedColor" red="0.25416460629999998" green="0.49778670069999997" blue="0.066440679129999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="itemTitle" destination="GTD-Vs-Ci9" id="8ZD-3v-Tt9"/>
-                                            <segue destination="ZEW-xF-hGh" kind="show" id="Mem-3X-jDi"/>
+                                            <segue destination="ZEW-xF-hGh" kind="show" identifier="toDetailViewController" id="Mem-3X-jDi"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -410,18 +410,18 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="7d2-Lq-j4O">
             <objects>
-                <viewController id="ZEW-xF-hGh" sceneMemberID="viewController">
+                <viewController id="ZEW-xF-hGh" customClass="DetailViewController" customModule="Plantabase" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ohf-Jr-maa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Map details will be implemented here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TV5-Lt-Tc4">
-                                <rect key="frame" x="0.0" y="113" width="414" height="116"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name of Plant Shop" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdg-sd-Qgj">
+                                <rect key="frame" x="13" y="110" width="381" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -429,7 +429,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="XGa-Rx-dXV"/>
                     </view>
-                    <navigationItem key="navigationItem" id="UNJ-G1-Xg4"/>
+                    <navigationItem key="navigationItem" id="UNJ-G1-Xg4">
+                        <barButtonItem key="rightBarButtonItem" title="Save" image="bookmark" catalog="system" id="klw-NC-3tX"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="itemName" destination="fdg-sd-Qgj" id="Wbj-yx-zrg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XBz-0c-n6u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -438,6 +443,7 @@
     </scenes>
     <resources>
         <image name="Home  Art.png" width="638.727294921875" height="638.727294921875"/>
+        <image name="bookmark" catalog="system" width="112" height="128"/>
         <image name="default profile picture.jpeg" width="634" height="951"/>
     </resources>
 </document>

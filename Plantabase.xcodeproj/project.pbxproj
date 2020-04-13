@@ -10,6 +10,7 @@
 		791527A42443EE4C0006F1A0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 791527A32443EE4C0006F1A0 /* CoreLocation.framework */; };
 		796B33472444089600B44288 /* items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796B33462444089600B44288 /* items.swift */; };
 		796B334B2444105500B44288 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796B334A2444105500B44288 /* ItemTableViewCell.swift */; };
+		796B334D2444347400B44288 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796B334C2444347400B44288 /* DetailViewController.swift */; };
 		797B94632426DDC900AF1311 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797B94622426DDC900AF1311 /* AppDelegate.swift */; };
 		797B94652426DDC900AF1311 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797B94642426DDC900AF1311 /* SceneDelegate.swift */; };
 		797B94672426DDC900AF1311 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797B94662426DDC900AF1311 /* ViewController.swift */; };
@@ -41,6 +42,7 @@
 		791527A32443EE4C0006F1A0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		796B33462444089600B44288 /* items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = items.swift; sourceTree = "<group>"; };
 		796B334A2444105500B44288 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
+		796B334C2444347400B44288 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		797B945F2426DDC900AF1311 /* Plantabase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Plantabase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		797B94622426DDC900AF1311 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		797B94642426DDC900AF1311 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				797B94662426DDC900AF1311 /* ViewController.swift */,
 				797B94A52426E43600AF1311 /* MapViewController.swift */,
 				797B94682426DDC900AF1311 /* Main.storyboard */,
+				796B334C2444347400B44288 /* DetailViewController.swift */,
 				796B334A2444105500B44288 /* ItemTableViewCell.swift */,
 				79F3FDFF2426F4C0008A306A /* SavedPlantsViewController.swift */,
 				797B94AB2426F22600AF1311 /* ProfileViewController.swift */,
@@ -237,6 +240,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				796B334D2444347400B44288 /* DetailViewController.swift in Sources */,
 				797B94672426DDC900AF1311 /* ViewController.swift in Sources */,
 				797B94632426DDC900AF1311 /* AppDelegate.swift in Sources */,
 				796B334B2444105500B44288 /* ItemTableViewCell.swift in Sources */,
