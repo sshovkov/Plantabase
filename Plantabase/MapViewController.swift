@@ -29,70 +29,71 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         super.viewDidLoad()
         searchButton.layer.cornerRadius = 15
         
-//        let addressString = "5302 E Van Buren St, Phoenix, AZ 85008"
-//        CLGeocoder().geocodeAddressString(addressString, completionHandler: {
-//            (placemarks, error) in
-//            if error != nil{
-//                print("Geocode failed: \(error!.localizedDescription)")
-//            } else if placemarks!.count > 0 {
-//                let placemark = placemarks![0]
-//                let lat = placemark.location?.coordinate.latitude
-//                let lon = placemark.location?.coordinate.longitude
-//                self.displayMap(latInput: lat ?? 0, lonInput: lon ?? 0)
-//            }
-//        })
+        let addressString = "5302 E Van Buren St, Phoenix, AZ 85008"
+        CLGeocoder().geocodeAddressString(addressString, completionHandler: {
+            (placemarks, error) in
+            if error != nil{
+                print("Geocode failed: \(error!.localizedDescription)")
+            } else if placemarks!.count > 0 {
+                let placemark = placemarks![0]
+                let lat = placemark.location?.coordinate.latitude
+                let lon = placemark.location?.coordinate.longitude
+                self.displayMap(latInput: lat ?? 0, lonInput: lon ?? 0)
+            }
+        })
         
-        manager.delegate = self
-        manager.desiredAccuracy = kCLLocationAccuracyBest
-        manager.requestWhenInUseAuthorization()
-        manager.startUpdatingLocation()
+//        // uncomment when doing user location (doesn't work well with testing app on laptop, only iPhone)
+//        manager.delegate = self
+//        manager.desiredAccuracy = kCLLocationAccuracyBest
+//        manager.requestWhenInUseAuthorization()
+//        manager.startUpdatingLocation()
         
         // Do any additional setup after loading the view.
     }
     
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let location = locations.first {
-            manager.stopUpdatingLocation()
-            
-            render(location)
-        }
-    }
+//    // uncomment when doing user location (doesn't work well with testing app on laptop, only iPhone)
+//    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+//        if let location = locations.first {
+//            manager.stopUpdatingLocation()
+//
+//            render(location)
+//        }
+//    }
     
-    func render(_ location: CLLocation) {
-        let coordinate = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-        let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
-        let region = MKCoordinateRegion(center: coordinate, span: span)
-        
-        let annotation = MKPointAnnotation()
-        annotation.coordinate = coordinate
-        annotation.title = "Tempe"
-        annotation.subtitle = "AZ"
-        self.map.addAnnotation(annotation)
-        
-        map.setRegion(region, animated: true)
-    }
+//    // uncomment when doing user location (doesn't work well with testing app on laptop, only iPhone)
+//    func render(_ location: CLLocation) {
+//        let coordinate = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+//        let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+//        let region = MKCoordinateRegion(center: coordinate, span: span)
+//        
+//        let annotation = MKPointAnnotation()
+//        annotation.coordinate = coordinate
+//        self.map.addAnnotation(annotation)
+//        
+//        map.setRegion(region, animated: true)
+//    }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
         super.touchesBegan(touches, with: event)
     }
     
-//    func displayMap (latInput: CLLocationDegrees, lonInput: CLLocationDegrees) {
-//        // display the map
-//        let lat : CLLocationDegrees = latInput
-//        let lon : CLLocationDegrees = lonInput
-//        let coordinates = CLLocationCoordinate2D(latitude: lat, longitude: lon)
-//        let span: MKCoordinateSpan = MKCoordinateSpan.init(latitudeDelta: 0.02, longitudeDelta: 0.02)
-//        let region: MKCoordinateRegion = MKCoordinateRegion.init(center: coordinates, span: span)
-//        self.map.setRegion(region, animated: true)
-//
-//        // add an annotation
-//        let annotation = MKPointAnnotation()
-//        annotation.coordinate = coordinates
-//        annotation.title = "Tempe"
-//        annotation.subtitle = "AZ"
-//        self.map.addAnnotation(annotation)
-//    }
+    func displayMap (latInput: CLLocationDegrees, lonInput: CLLocationDegrees) {
+        // display the map
+        let lat : CLLocationDegrees = latInput
+        let lon : CLLocationDegrees = lonInput
+        let coordinates = CLLocationCoordinate2D(latitude: lat, longitude: lon)
+        let span: MKCoordinateSpan = MKCoordinateSpan.init(latitudeDelta: 0.02, longitudeDelta: 0.02)
+        let region: MKCoordinateRegion = MKCoordinateRegion.init(center: coordinates, span: span)
+        self.map.setRegion(region, animated: true)
+
+        // add an annotation
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = coordinates
+        annotation.title = "Tempe"
+        annotation.subtitle = "AZ"
+        self.map.addAnnotation(annotation)
+    }
     
     @IBAction func showMap(_ sender: Any) {
         switch(mapType.selectedSegmentIndex) {
