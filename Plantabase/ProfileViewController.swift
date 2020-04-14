@@ -9,9 +9,12 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
+    
+    var temp:String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(temp!)
 
         // Do any additional setup after loading the view.
     }

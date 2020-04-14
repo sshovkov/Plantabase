@@ -32,9 +32,9 @@
 		797B94A82426E58500AF1311 /* CreateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797B94A72426E58500AF1311 /* CreateProfileViewController.swift */; };
 		797B94AC2426F22600AF1311 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797B94AB2426F22600AF1311 /* ProfileViewController.swift */; };
 		7996D7242443F7EF00284586 /* Home  Art.png in Resources */ = {isa = PBXBuildFile; fileRef = 7996D7232443F7EF00284586 /* Home  Art.png */; };
+		79BD525F244557A70097F710 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BD525E244557A70097F710 /* Model.swift */; };
+		79BD5261244557C80097F710 /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BD5260244557C80097F710 /* UserEntity.swift */; };
 		79D77B622444EFE1000663CD /* plant girl.png in Resources */ = {isa = PBXBuildFile; fileRef = 79D77B612444EFE0000663CD /* plant girl.png */; };
-		79D77B6D2444FE8D000663CD /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D77B6B2444FE8D000663CD /* User+CoreDataClass.swift */; };
-		79D77B6E2444FE8D000663CD /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D77B6C2444FE8D000663CD /* User+CoreDataProperties.swift */; };
 		79F3FE002426F4C0008A306A /* SavedPlantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F3FDFF2426F4C0008A306A /* SavedPlantsViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -67,9 +67,9 @@
 		797B94A72426E58500AF1311 /* CreateProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileViewController.swift; sourceTree = "<group>"; };
 		797B94AB2426F22600AF1311 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		7996D7232443F7EF00284586 /* Home  Art.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Home  Art.png"; path = "Pictures/Home  Art.png"; sourceTree = SOURCE_ROOT; };
+		79BD525E244557A70097F710 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		79BD5260244557C80097F710 /* UserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
 		79D77B612444EFE0000663CD /* plant girl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "plant girl.png"; path = "Pictures/plant girl.png"; sourceTree = SOURCE_ROOT; };
-		79D77B6B2444FE8D000663CD /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
-		79D77B6C2444FE8D000663CD /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		79F3FDFF2426F4C0008A306A /* SavedPlantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPlantsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,17 +117,17 @@
 				797B94662426DDC900AF1311 /* ViewController.swift */,
 				797B94A52426E43600AF1311 /* MapViewController.swift */,
 				796B334C2444347400B44288 /* DetailViewController.swift */,
+				79BD525E244557A70097F710 /* Model.swift */,
+				79BD5260244557C80097F710 /* UserEntity.swift */,
 				797B94A72426E58500AF1311 /* CreateProfileViewController.swift */,
 				79F3FDFF2426F4C0008A306A /* SavedPlantsViewController.swift */,
 				797B94AB2426F22600AF1311 /* ProfileViewController.swift */,
-				79D77B6B2444FE8D000663CD /* User+CoreDataClass.swift */,
 				796B33462444089600B44288 /* items.swift */,
 				796B334A2444105500B44288 /* ItemTableViewCell.swift */,
 				797B946E2426DDC900AF1311 /* Assets.xcassets */,
 				797B94702426DDC900AF1311 /* LaunchScreen.storyboard */,
 				797B94622426DDC900AF1311 /* AppDelegate.swift */,
 				797B94642426DDC900AF1311 /* SceneDelegate.swift */,
-				79D77B6C2444FE8D000663CD /* User+CoreDataProperties.swift */,
 				797B94732426DDC900AF1311 /* Info.plist */,
 				797B946B2426DDC900AF1311 /* Plantabase.xcdatamodeld */,
 				79D77B632444FACC000663CD /* Images */,
@@ -248,15 +248,15 @@
 			files = (
 				796B334D2444347400B44288 /* DetailViewController.swift in Sources */,
 				797B94672426DDC900AF1311 /* ViewController.swift in Sources */,
-				79D77B6D2444FE8D000663CD /* User+CoreDataClass.swift in Sources */,
 				797B94632426DDC900AF1311 /* AppDelegate.swift in Sources */,
+				79BD525F244557A70097F710 /* Model.swift in Sources */,
 				796B334B2444105500B44288 /* ItemTableViewCell.swift in Sources */,
 				796B33472444089600B44288 /* items.swift in Sources */,
 				797B946D2426DDC900AF1311 /* Plantabase.xcdatamodeld in Sources */,
 				797B94A62426E43600AF1311 /* MapViewController.swift in Sources */,
 				797B94AC2426F22600AF1311 /* ProfileViewController.swift in Sources */,
+				79BD5261244557C80097F710 /* UserEntity.swift in Sources */,
 				797B94A82426E58500AF1311 /* CreateProfileViewController.swift in Sources */,
-				79D77B6E2444FE8D000663CD /* User+CoreDataProperties.swift in Sources */,
 				79F3FE002426F4C0008A306A /* SavedPlantsViewController.swift in Sources */,
 				797B94652426DDC900AF1311 /* SceneDelegate.swift in Sources */,
 			);

@@ -7,30 +7,25 @@
 //
 
 import UIKit
+import CoreData
 
 class CreateProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var plantField: UITextField!
+    @IBOutlet weak var uploadProfilePictureButton: UIButton!
     
-    let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    var userModel:UserEntity?
-    
-    
-    // Array to store User entities from the coredata
-    var fetchResults = [UserEntity]()
+    var m:Model?
+    var returnTemp = "Returned Home from Create View"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        userModel = UserEntity(context: managedObjectContext)
-    
+        uploadProfilePictureButton.layer.cornerRadius = 25
     }
     
-    @IBAction func uploadProfilePicButton(_ sender: UIButton) {
-        userModel?.SaveContext(name: nameField.text!, favePlant: plantField.text!)
+    @IBAction func createProfile(_ sender: UIButton) {
+        m?.SaveContext(userName: nameField.text!, userPlant: plantField.text!)
     }
-    
-    
     
 
 }
