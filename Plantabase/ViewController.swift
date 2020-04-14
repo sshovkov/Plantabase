@@ -54,7 +54,8 @@ class ViewController: UIViewController {
         
         if (segue.identifier == "toProfile") {
             let destination = segue.destination as! ProfileViewController
-            destination.temp = "Hello"
+            let lastEntity = m?.fetchRecords().last
+            destination.userItem = lastEntity
         }
     }
     

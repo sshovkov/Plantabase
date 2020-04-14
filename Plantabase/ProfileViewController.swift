@@ -9,14 +9,28 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
-    
-    var temp:String?
 
+    var userItem:UserEntity?
+    
+    @IBOutlet weak var profilePic: UIImageView!
+    @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var favoritePlant: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(temp!)
+        userName.text = userItem?.name
+        favoritePlant.text = userItem?.favePlant
+        //setImage()
 
         // Do any additional setup after loading the view.
+    }
+    
+    func setImage() {
+        //self.profile.image = picName
+        self.profilePic.layer.masksToBounds = true
+        self.profilePic.contentMode = UIView.ContentMode.scaleAspectFill
+        self.profilePic.layer.cornerRadius = profilePic.bounds.width/2
+        self.profilePic.clipsToBounds = true
     }
     
 
