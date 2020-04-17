@@ -151,7 +151,17 @@
                                 <connections>
                                     <action selector="createProfile:" destination="Ef8-mY-aA4" eventType="touchUpInside" id="l65-jh-RBx"/>
                                     <action selector="uploadProfilePicture:" destination="q19-sS-qjW" eventType="touchUpInside" id="hFv-Kp-6mv"/>
-                                    <segue destination="q19-sS-qjW" kind="unwind" unwindAction="returnedFromcreateWithSegue:" id="IvU-0j-Q1F"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EdA-9v-hco">
+                                <rect key="frame" x="141" y="663" width="122" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="20"/>
+                                <state key="normal" title="Create Profile">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="q19-sS-qjW" kind="unwind" unwindAction="returnedFromcreateWithSegue:" id="8yO-wP-55u"/>
                                 </connections>
                             </button>
                         </subviews>

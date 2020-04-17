@@ -20,13 +20,14 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         userName.text = userItem?.name
         favoritePlant.text = userItem?.favePlant
-        //setImage()
+        setImage()
 
         // Do any additional setup after loading the view.
     }
     
     func setImage() {
-        //self.profile.image = picName
+        let picture2 = UIImage(data: userItem!.picture! as Data)
+        profilePic.image = picture2
         self.profilePic.layer.masksToBounds = true
         self.profilePic.contentMode = UIView.ContentMode.scaleAspectFill
         self.profilePic.layer.cornerRadius = profilePic.bounds.width/2

@@ -20,7 +20,7 @@ public class Model {
         // Getting a handler to the coredata managed object context
     }
     
-    func SaveContext(userName: String, userPlant: String)
+    func SaveContext(userName: String, userPlant: String, UserPic: Data)
     {
         // get a handler to the Contacts entity through the managed object context
         let ent = NSEntityDescription.entity(forEntityName: "UserEntity", in: self.managedObjectContext!)
@@ -31,6 +31,7 @@ public class Model {
         // add data to each field in the entity
         newItem.name = userName
         newItem.favePlant = userPlant
+        newItem.picture = UserPic
         
         // save the new entity
         do {

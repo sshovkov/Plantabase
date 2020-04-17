@@ -13,4 +13,5 @@ public class UserEntity: NSManagedObject {
     
     @NSManaged public var name: String?
     @NSManaged public var favePlant: String?
+    @NSManaged public var picture: Data?
 }

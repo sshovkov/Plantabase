@@ -3,8 +3,9 @@
     <entity name="UserEntity" representedClassName=".UserEntity" syncable="YES">
         <attribute name="favePlant" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="picture" optional="YES" attributeType="Binary"/>
     </entity>
     <elements>
-        <element name="UserEntity" positionX="-63" positionY="-18" width="128" height="73"/>
+        <element name="UserEntity" positionX="-63" positionY="-18" width="128" height="88"/>
     </elements>
 </model>
