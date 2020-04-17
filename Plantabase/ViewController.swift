@@ -17,11 +17,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var goToProfileButton: UIButton!
     @IBOutlet weak var createProfileButton: UIButton!
     var m:Model?
+    var m1:ModelShop?
+    
     let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
     override func viewDidLoad() {
         super.viewDidLoad()
         m = Model(context: managedObjectContext)
+        m1 = ModelShop(context: managedObjectContext)
         
         findNurseryButton.layer.cornerRadius = 25
         goToProfileButton.layer.cornerRadius = 25
@@ -30,6 +33,7 @@ class ViewController: UIViewController {
         print("Count is: \(m?.fetchRecords().count ?? -1)")
         print("Name is: \(m?.fetchRecords().last?.name ?? "userName")")
         print("Fave Plant is: \(m?.fetchRecords().last?.favePlant ?? "userPlant")")
+        print("Saved shops: \(m1?.fetchRecords().count ?? -1)")
         
         
         if (m?.fetchRecords().count == 0) {

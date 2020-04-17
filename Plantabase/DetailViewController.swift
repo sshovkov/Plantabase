@@ -19,7 +19,6 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var phone: UILabel!
     @IBOutlet weak var saveButton: UIButton!
     
-    
     var m:ModelShop?
     let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     

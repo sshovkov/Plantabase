@@ -38,6 +38,7 @@
 		79F3FE002426F4C0008A306A /* SavedPlantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F3FDFF2426F4C0008A306A /* SavedPlantsViewController.swift */; };
 		79FDA1052449652100AEFB94 /* ShopListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FDA1032449652100AEFB94 /* ShopListEntity.swift */; };
 		79FDA1072449662300AEFB94 /* ModelShop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FDA1062449662300AEFB94 /* ModelShop.swift */; };
+		79FDA10924496EC300AEFB94 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FDA10824496EC300AEFB94 /* ProfileTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +76,7 @@
 		79F3FDFF2426F4C0008A306A /* SavedPlantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPlantsViewController.swift; sourceTree = "<group>"; };
 		79FDA1032449652100AEFB94 /* ShopListEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopListEntity.swift; sourceTree = "<group>"; };
 		79FDA1062449662300AEFB94 /* ModelShop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelShop.swift; sourceTree = "<group>"; };
+		79FDA10824496EC300AEFB94 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				79FDA1032449652100AEFB94 /* ShopListEntity.swift */,
 				796B33462444089600B44288 /* items.swift */,
 				796B334A2444105500B44288 /* ItemTableViewCell.swift */,
+				79FDA10824496EC300AEFB94 /* ProfileTableViewCell.swift */,
 				797B946E2426DDC900AF1311 /* Assets.xcassets */,
 				797B94702426DDC900AF1311 /* LaunchScreen.storyboard */,
 				797B94622426DDC900AF1311 /* AppDelegate.swift */,
@@ -261,6 +264,7 @@
 				797B946D2426DDC900AF1311 /* Plantabase.xcdatamodeld in Sources */,
 				797B94A62426E43600AF1311 /* MapViewController.swift in Sources */,
 				797B94AC2426F22600AF1311 /* ProfileViewController.swift in Sources */,
+				79FDA10924496EC300AEFB94 /* ProfileTableViewCell.swift in Sources */,
 				79FDA1052449652100AEFB94 /* ShopListEntity.swift in Sources */,
 				79BD5261244557C80097F710 /* UserEntity.swift in Sources */,
 				797B94A82426E58500AF1311 /* CreateProfileViewController.swift in Sources */,

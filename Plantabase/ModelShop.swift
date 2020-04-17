@@ -41,5 +41,16 @@ public class ModelShop {
             print(error.localizedDescription)
         }
     }
+    
+    func fetchRecords() -> Array<ShopListEntity>{
+        // Create a new fetch request using the FruitEntity
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "ShopListEntity")
+        let sort = NSSortDescriptor(key: "shopName", ascending: true)
+        fetchRequest.sortDescriptors = [sort]
+        // Execute the fetch request, and cast the results to an array of FruitEnity objects
+        fetchResults = ((try? managedObjectContext!.fetch(fetchRequest)) as? [ShopListEntity])!
+        
+        return fetchResults
+    }
 
 }
