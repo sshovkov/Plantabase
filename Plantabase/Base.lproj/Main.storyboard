@@ -241,16 +241,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rp3-Qw-SPa">
-                                <rect key="frame" x="280" y="452" width="57" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="PLANTS">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Rpz-Mc-MzE" kind="show" id="71v-Zl-jGV"/>
-                                </connections>
-                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nxb-xP-OOC">
                                 <rect key="frame" x="83" y="108" width="249" height="249"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -269,6 +259,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rp3-Qw-SPa">
+                                <rect key="frame" x="280" y="452" width="57" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="PLANTS">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Rpz-Mc-MzE" kind="show" id="71v-Zl-jGV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="qRH-u8-gGE"/>
@@ -276,7 +276,9 @@
                     <navigationItem key="navigationItem" title="Profile" id="KYq-WQ-QSH"/>
                     <connections>
                         <outlet property="favoritePlant" destination="pJV-3i-Ly7" id="elK-qn-Y1r"/>
+                        <outlet property="plantCountLabel" destination="smu-2K-zyQ" id="dWa-DG-kGE"/>
                         <outlet property="profilePic" destination="Nxb-xP-OOC" id="1DS-du-Y8l"/>
+                        <outlet property="shopCountLabel" destination="dO5-5T-WjI" id="Y5v-XY-Ag1"/>
                         <outlet property="userName" destination="Lv3-vQ-uIY" id="fK6-F1-gqJ"/>
                     </connections>
                 </viewController>
@@ -293,7 +295,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MY PLANTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5sm-sc-g9L">
-                                <rect key="frame" x="37" y="69" width="340" height="90"/>
+                                <rect key="frame" x="37" y="73" width="340" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="57"/>
                                 <color key="textColor" red="0.25490196079999999" green="0.4941176471" blue="0.066666666669999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -480,10 +482,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbi-Ld-Kjp">
-                                <rect key="frame" x="85" y="467" width="245" height="63"/>
+                                <rect key="frame" x="88" y="423" width="238" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.44874525069999999" green="0.88335525989999997" blue="0.63778525590000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="28"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="23"/>
                                 <state key="normal" title="Go to Website">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -516,17 +518,28 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOo-eN-IRc">
+                                <rect key="frame" x="143" y="491" width="129" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.44874525069999999" green="0.88335525989999997" blue="0.63778525590000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="23"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveButton:" destination="ZEW-xF-hGh" eventType="touchUpInside" id="9RS-oY-VAz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="XGa-Rx-dXV"/>
                     </view>
-                    <navigationItem key="navigationItem" id="UNJ-G1-Xg4">
-                        <barButtonItem key="rightBarButtonItem" title="Save" image="bookmark" catalog="system" id="klw-NC-3tX"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="UNJ-G1-Xg4"/>
                     <connections>
                         <outlet property="address" destination="DCf-Mg-vnq" id="ATE-Ts-31a"/>
                         <outlet property="itemName" destination="fdg-sd-Qgj" id="Wbj-yx-zrg"/>
                         <outlet property="phone" destination="wkW-qw-JHJ" id="MSt-IA-Mp4"/>
+                        <outlet property="saveButton" destination="fOo-eN-IRc" id="oIg-yL-nDl"/>
                         <outlet property="websiteButton" destination="fbi-Ld-Kjp" id="IYg-5G-jJe"/>
                     </connections>
                 </viewController>
@@ -537,7 +550,6 @@
     </scenes>
     <resources>
         <image name="Home  Art.png" width="638.727294921875" height="638.727294921875"/>
-        <image name="bookmark" catalog="system" width="112" height="128"/>
         <image name="plant girl.png" width="638.727294921875" height="638.727294921875"/>
     </resources>
 </document>

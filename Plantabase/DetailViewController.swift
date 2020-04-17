@@ -17,14 +17,21 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var itemName: UILabel!
     @IBOutlet weak var address: UILabel!
     @IBOutlet weak var phone: UILabel!
+    @IBOutlet weak var saveButton: UIButton!
+    
+    
+    var m:ModelShop?
+    let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     var selectedItem:item?
     var addressString: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        m = ModelShop(context: managedObjectContext)
         itemName.text = selectedItem?.itemName
         websiteButton.layer.cornerRadius = 25
+        saveButton.layer.cornerRadius = 17
         phone.text = selectedItem?.itemPhoneNum
         // get the coordinates of the selected item
         let lat = selectedItem?.itemLat
@@ -82,6 +89,10 @@ class DetailViewController: UIViewController {
             let url = URL(string: "https://www.google.com")
             UIApplication.shared.open(url!)
         }
+    }
+
+    @IBAction func saveButton(_ sender: Any) {
+        m?.SaveContext(name: selectedItem?.itemName ?? "Invalid Name")
     }
     
     
