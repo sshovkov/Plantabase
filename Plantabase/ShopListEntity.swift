@@ -13,6 +13,6 @@ import CoreData
 
 public class ShopListEntity: NSManagedObject{
 
-    @NSManaged public var shopName: String?
+    @NSManaged public var shopName: String
 
 }

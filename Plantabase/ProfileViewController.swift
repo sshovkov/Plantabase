@@ -24,18 +24,19 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     var shopCount = 0
     var plantCount = 0
-    var arrayOfShops:Array<ShopListEntity>?
+    var arrayOfShops = [ShopListEntity]()
+    var datasourceArray = [ShopListEntity]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        m = ModelShop(context: managedObjectContext)
+        let m = ModelShop(context: managedObjectContext)
         
         userName.text = userItem?.name
         favoritePlant.text = userItem?.favePlant
         setImage()
-        shopCountLabel.text = String(shopCount)
+        arrayOfShops = m.fetchRecords()
+        shopCountLabel.text = String(arrayOfShops.count)
         plantCountLabel.text = String(plantCount)
-        arrayOfShops = m?.fetchRecords()
         profileTable.reloadData()
         // Do any additional setup after loading the view.
     }
@@ -52,20 +53,17 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     // Populate the table view from core data
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arrayOfShops?.count ?? 0
+        return arrayOfShops.count
     }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        let cell = tableView.dequeueReusableCell(withIdentifier: "profileCell", for: indexPath) as! ProfileTableViewCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "profileCell", for: indexPath)
         cell.layer.borderWidth = 1.0
-        print("Debugging. ShopName is \(arrayOfShops![indexPath.row].shopName)")
-        cell.shopTitle.text = arrayOfShops![indexPath.row].shopName
+        cell.textLabel?.text = arrayOfShops[indexPath.row].shopName
 
         return cell
 
     }
-    
 
     /*
     // MARK: - Navigation
