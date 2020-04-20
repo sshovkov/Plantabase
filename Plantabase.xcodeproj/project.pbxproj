@@ -22,6 +22,8 @@
 		793155EC244D318400569FB0 /* snake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 793155E3244D318400569FB0 /* snake.jpg */; };
 		793155ED244D318400569FB0 /* paradise.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 793155E4244D318400569FB0 /* paradise.jpg */; };
 		793155EE244D318400569FB0 /* rubber.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 793155E5244D318400569FB0 /* rubber.jpg */; };
+		793155F0244D4C8300569FB0 /* PlantDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793155EF244D4C8300569FB0 /* PlantDetailsViewController.swift */; };
+		793155F2244D596700569FB0 /* PlantInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793155F1244D596700569FB0 /* PlantInfo.swift */; };
 		796B33472444089600B44288 /* items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796B33462444089600B44288 /* items.swift */; };
 		796B334B2444105500B44288 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796B334A2444105500B44288 /* ItemTableViewCell.swift */; };
 		796B334D2444347400B44288 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796B334C2444347400B44288 /* DetailViewController.swift */; };
@@ -71,6 +73,8 @@
 		793155E3244D318400569FB0 /* snake.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = snake.jpg; path = Pictures/snake.jpg; sourceTree = SOURCE_ROOT; };
 		793155E4244D318400569FB0 /* paradise.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = paradise.jpg; path = Pictures/paradise.jpg; sourceTree = SOURCE_ROOT; };
 		793155E5244D318400569FB0 /* rubber.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = rubber.jpg; path = Pictures/rubber.jpg; sourceTree = SOURCE_ROOT; };
+		793155EF244D4C8300569FB0 /* PlantDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantDetailsViewController.swift; sourceTree = "<group>"; };
+		793155F1244D596700569FB0 /* PlantInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantInfo.swift; sourceTree = "<group>"; };
 		796B33462444089600B44288 /* items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = items.swift; sourceTree = "<group>"; };
 		796B334A2444105500B44288 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		796B334C2444347400B44288 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +158,8 @@
 				797B94A72426E58500AF1311 /* CreateProfileViewController.swift */,
 				797B94AB2426F22600AF1311 /* ProfileViewController.swift */,
 				79F3FDFF2426F4C0008A306A /* SavedPlantsViewController.swift */,
+				793155EF244D4C8300569FB0 /* PlantDetailsViewController.swift */,
+				793155F1244D596700569FB0 /* PlantInfo.swift */,
 				79BD525E244557A70097F710 /* Model.swift */,
 				79BD5260244557C80097F710 /* UserEntity.swift */,
 				79FDA1062449662300AEFB94 /* ModelShop.swift */,
@@ -318,9 +324,11 @@
 				796B33472444089600B44288 /* items.swift in Sources */,
 				797B946D2426DDC900AF1311 /* Plantabase.xcdatamodeld in Sources */,
 				797B94A62426E43600AF1311 /* MapViewController.swift in Sources */,
+				793155F0244D4C8300569FB0 /* PlantDetailsViewController.swift in Sources */,
 				797B94AC2426F22600AF1311 /* ProfileViewController.swift in Sources */,
 				79FDA10924496EC300AEFB94 /* ProfileTableViewCell.swift in Sources */,
 				79FDA1052449652100AEFB94 /* ShopListEntity.swift in Sources */,
+				793155F2244D596700569FB0 /* PlantInfo.swift in Sources */,
 				79BD5261244557C80097F710 /* UserEntity.swift in Sources */,
 				792201CD244D1B670026096E /* ModelPlant.swift in Sources */,
 				797B94A82426E58500AF1311 /* CreateProfileViewController.swift in Sources */,

@@ -130,6 +130,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         let span: MKCoordinateSpan = MKCoordinateSpan.init(latitudeDelta: 0.15, longitudeDelta: 0.15)
         let region: MKCoordinateRegion = MKCoordinateRegion.init(center: homeCoordinates, span: span)
         self.map.setRegion(region, animated: true)
+        self.view.endEditing(true)
     }
     
     func createAnnotations (matchingItems: [MKMapItem]) {

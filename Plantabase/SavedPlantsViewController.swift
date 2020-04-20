@@ -58,7 +58,6 @@ class SavedPlantsViewController: UIViewController, UITableViewDelegate, UITableV
         
         alert.addAction(cancelAction)
         alert.addAction(addOption)
-        
         self.present(alert, animated: true, completion: nil)
     }
     
@@ -95,7 +94,20 @@ class SavedPlantsViewController: UIViewController, UITableViewDelegate, UITableV
             let imageData = UIImage(named: "default.jpg")
             self.mp?.SaveContext(plantNameInput: name, plantPicInput: (imageData?.pngData())!)
         }
+        plantTable.reloadData()
 
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let selectedIndex: IndexPath = self.plantTable.indexPath(for: sender as! UITableViewCell)!
+        let plant = arrayOfPlants[selectedIndex.row]
+        if(segue.identifier == "plantDetailView"){
+            if let viewController: PlantDetailsViewController = segue.destination as? PlantDetailsViewController {
+                viewController.selectedPlantName = plant.plantName
+                viewController.selectedPlantPic = UIImage(data: plant.plantPicture!)
+            }
+        }
     }
 
 }
