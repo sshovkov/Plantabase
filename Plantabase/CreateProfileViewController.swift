@@ -27,29 +27,42 @@ class CreateProfileViewController: UIViewController, UIImagePickerControllerDele
     
     @IBAction func createProfile(_ sender: UIButton) {
         
-        // create alert controller for diplaying option to select image
-        let alert = UIAlertController(title: "Set a Profile Picture", message: nil, preferredStyle: .alert)
-        self.present(alert, animated: true, completion: nil)
-        let photoPicker = UIImagePickerController()
-        photoPicker.delegate = self
-        
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in }
-        let photoLibraryAction = UIAlertAction(title: "Photo Library", style: .default) { (action) in
-            photoPicker.sourceType = .photoLibrary
-            self.present (photoPicker, animated: true, completion: nil)
+        if (nameField.text == "" || plantField.text == "") {
+            let alert2 = UIAlertController(title: "One of the fields is invalid. Please try again.", message: nil, preferredStyle: .alert)
+            let cancelAction = UIAlertAction(title: "OK", style: .cancel) { (action) in }
+            alert2.addAction(cancelAction)
+            self.present(alert2, animated: true, completion: nil)
         }
-        let cameraAction = UIAlertAction(title: "Camera", style: .default) { (action) in
-            if UIImagePickerController.isSourceTypeAvailable(.camera) {
-                photoPicker.sourceType = .camera
+        else {
+            // create alert controller for diplaying option to select image
+            let alert = UIAlertController(title: "Set a Profile Picture", message: nil, preferredStyle: .alert)
+            self.present(alert, animated: true, completion: nil)
+            let photoPicker = UIImagePickerController()
+            photoPicker.delegate = self
+            
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in }
+            let photoLibraryAction = UIAlertAction(title: "Photo Library", style: .default) { (action) in
+                photoPicker.sourceType = .photoLibrary
                 self.present (photoPicker, animated: true, completion: nil)
-            } else {
-                print("Camera is not available")
             }
+            let cameraAction = UIAlertAction(title: "Camera", style: .default) { (action) in
+                if UIImagePickerController.isSourceTypeAvailable(.camera) {
+                    photoPicker.sourceType = .camera
+                    self.present (photoPicker, animated: true, completion: nil)
+                } else {
+                    let alert3 = UIAlertController(title: "Camera is not available right now.", message: nil, preferredStyle: .alert)
+                    let cancelAction = UIAlertAction(title: "OK", style: .cancel) { (action) in }
+                    alert3.addAction(cancelAction)
+                    self.present(alert3, animated: true, completion: nil)
+                    print("Camera is not available")
+                }
+            }
+            
+            alert.addAction(photoLibraryAction)
+            alert.addAction(cameraAction)
+            alert.addAction(cancelAction)
         }
         
-        alert.addAction(photoLibraryAction)
-        alert.addAction(cameraAction)
-        alert.addAction(cancelAction)
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]){
