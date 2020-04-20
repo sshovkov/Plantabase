@@ -45,57 +45,57 @@ class SavedPlantsViewController: UIViewController, UITableViewDelegate, UITableV
         alert.addTextField(configurationHandler: { textField in
             textField.placeholder = "Enter name of new plant here"
         })
-        self.present(alert, animated: true, completion: nil)
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in }
+    
         let addOption = UIAlertAction(title: "Add", style: .default) { (action) in
-            
-            if let name = alert.textFields?.first?.text {
-                switch name.uppercased() {
-                case "MONSTERA", "MONSTERA DELICIOSA", "SWISS CHEESE PLANT", "SWISS CHEESE", "PHILODENDRON":
-                    let imageData = UIImage(named: "monstera.jpg")
-                    self.mp?.SaveContext(plantNameInput: name, plantPicInput: (imageData?.pngData())!)
-                case "RUBBER", "RUBBER TREE":
-                    let imageData = UIImage(named: "rubber.jpg")
-                    self.mp?.SaveContext(plantNameInput: name, plantPicInput: (imageData?.pngData())!)
-                case "ALOE", "ALOE VERA":
-                    let imageData = UIImage(named: "aloe.jpg")
-                    self.mp?.SaveContext(plantNameInput: name, plantPicInput: (imageData?.pngData())!)
-                case "CALATHEA", "PRAYER PLANT":
-                    let imageData = UIImage(named: "calathea.jpg")
-                    self.mp?.SaveContext(plantNameInput: name, plantPicInput: (imageData?.pngData())!)
-                case "BIRD OF PARADISE":
-                    let imageData = UIImage(named: "paradise.jpg")
-                    self.mp?.SaveContext(plantNameInput: name, plantPicInput: (imageData?.pngData())!)
-                case "SNAKE PLANT":
-                    let imageData = UIImage(named: "snake.jpg")
-                    self.mp?.SaveContext(plantNameInput: name, plantPicInput: (imageData?.pngData())!)
-                case "POTHOS", "GOLDEN POTHOS", "MARBLE POTHOS":
-                   let imageData = UIImage(named: "pothos.jpg")
-                    self.mp?.SaveContext(plantNameInput: name, plantPicInput: (imageData?.pngData())!)
-                case "FIDDLE LEAF FIG":
-                    let imageData = UIImage(named: "fiddle.jpg")
-                    self.mp?.SaveContext(plantNameInput: name, plantPicInput: (imageData?.pngData())!)
-                case "PILEA":
-                    let imageData = UIImage(named: "pilea.jpg")
-                    self.mp?.SaveContext(plantNameInput: name, plantPicInput: (imageData?.pngData())!)
-                default:
-                    let imageData = UIImage(named: "default.jpg")
-                    self.mp?.SaveContext(plantNameInput: name, plantPicInput: (imageData?.pngData())!)
-                }
+            if let addedName = alert.textFields?.first?.text {
+                self.addToTable(name: addedName)
+                self.plantTable.reloadData()
+                print("Table Reloaded")
             }
         }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in }
+        
         alert.addAction(cancelAction)
         alert.addAction(addOption)
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
-    /*
-    // MARK: - Navigation
+    func addToTable(name: String) {
+        switch name.uppercased() {
+        case "MONSTERA", "MONSTERA DELICIOSA", "SWISS CHEESE PLANT", "SWISS CHEESE", "PHILODENDRON":
+            let imageData = UIImage(named: "monstera.jpg")
+            self.mp?.SaveContext(plantNameInput: name, plantPicInput: (imageData?.pngData())!)
+        case "RUBBER", "RUBBER TREE":
+            let imageData = UIImage(named: "rubber.jpg")
+            self.mp?.SaveContext(plantNameInput: name, plantPicInput: (imageData?.pngData())!)
+        case "ALOE", "ALOE VERA":
+            let imageData = UIImage(named: "aloe.jpg")
+            self.mp?.SaveContext(plantNameInput: name, plantPicInput: (imageData?.pngData())!)
+        case "CALATHEA", "PRAYER PLANT":
+            let imageData = UIImage(named: "calathea.jpg")
+            self.mp?.SaveContext(plantNameInput: name, plantPicInput: (imageData?.pngData())!)
+        case "BIRD OF PARADISE":
+            let imageData = UIImage(named: "paradise.jpg")
+            self.mp?.SaveContext(plantNameInput: name, plantPicInput: (imageData?.pngData())!)
+        case "SNAKE PLANT":
+            let imageData = UIImage(named: "snake.jpg")
+            self.mp?.SaveContext(plantNameInput: name, plantPicInput: (imageData?.pngData())!)
+        case "POTHOS", "GOLDEN POTHOS", "MARBLE POTHOS":
+           let imageData = UIImage(named: "pothos.jpg")
+            self.mp?.SaveContext(plantNameInput: name, plantPicInput: (imageData?.pngData())!)
+        case "FIDDLE LEAF FIG":
+            let imageData = UIImage(named: "fiddle.jpg")
+            self.mp?.SaveContext(plantNameInput: name, plantPicInput: (imageData?.pngData())!)
+        case "PILEA":
+            let imageData = UIImage(named: "pilea.jpg")
+            self.mp?.SaveContext(plantNameInput: name, plantPicInput: (imageData?.pngData())!)
+        default:
+            let imageData = UIImage(named: "default.jpg")
+            self.mp?.SaveContext(plantNameInput: name, plantPicInput: (imageData?.pngData())!)
+        }
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
 
 }

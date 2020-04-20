@@ -18,6 +18,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var shopCountLabel: UILabel!
     @IBOutlet weak var profileTable: UITableView!
     @IBOutlet weak var myPlantsBtn: UIButton!
+    @IBOutlet weak var nurseriesLabel: UILabel!
     
     var m:ModelShop?
     let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -32,13 +33,16 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         favoritePlant.text = userItem?.favePlant
         setImage()
         arrayOfShops = m.fetchRecords()
+        if (arrayOfShops.count == 1){
+            nurseriesLabel.text = "NURSERY"
+        }
         shopCountLabel.text = String(arrayOfShops.count)
         profileTable.reloadData()
         // Do any additional setup after loading the view.
     }
     
     func setImage() {
-        let picture2 = UIImage(data: userItem!.picture! as Data)
+        let picture2 = UIImage(data: userItem!.picture!)
         profilePic.image = picture2
         self.profilePic.layer.masksToBounds = true
         self.profilePic.contentMode = UIView.ContentMode.scaleAspectFill
