@@ -49,6 +49,7 @@ class SavedPlantsViewController: UIViewController, UITableViewDelegate, UITableV
         let addOption = UIAlertAction(title: "Add", style: .default) { (action) in
             if let addedName = alert.textFields?.first?.text {
                 self.addToTable(name: addedName)
+                self.arrayOfPlants = self.mp!.fetchRecords()
                 self.plantTable.reloadData()
                 print("Table Reloaded")
             }
@@ -94,7 +95,6 @@ class SavedPlantsViewController: UIViewController, UITableViewDelegate, UITableV
             let imageData = UIImage(named: "default.jpg")
             self.mp?.SaveContext(plantNameInput: name, plantPicInput: (imageData?.pngData())!)
         }
-        plantTable.reloadData()
 
     }
     
