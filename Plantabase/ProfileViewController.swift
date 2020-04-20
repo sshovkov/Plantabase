@@ -64,6 +64,31 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         return cell
 
     }
+    
+    // Delete table entry (swipe right to left)
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool
+    {
+        return true
+    }
+    
+    private func tableView(tableView: UITableView, editingStyleForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell.EditingStyle {
+        return UITableViewCell.EditingStyle.delete
+        
+    }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath)
+    {
+        if editingStyle == .delete {
+            managedObjectContext.delete(arrayOfShops[indexPath.row])
+            arrayOfShops.remove(at: indexPath.row)
+            
+            do {
+                try managedObjectContext.save()
+            } catch{
+                
+            }
+            profileTable.reloadData()
+        }
+    }
 
     /*
     // MARK: - Navigation

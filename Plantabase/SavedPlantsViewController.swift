@@ -40,6 +40,31 @@ class SavedPlantsViewController: UIViewController, UITableViewDelegate, UITableV
         return cell
     }
     
+    // Delete table entry (swipe right to left)
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool
+    {
+        return true
+    }
+    
+    private func tableView(tableView: UITableView, editingStyleForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell.EditingStyle {
+        return UITableViewCell.EditingStyle.delete
+        
+    }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath)
+    {
+        if editingStyle == .delete {
+            managedObjectContext.delete(arrayOfPlants[indexPath.row])
+            arrayOfPlants.remove(at: indexPath.row)
+            
+            do {
+                try managedObjectContext.save()
+            } catch{
+                
+            }
+            plantTable.reloadData()
+        }
+    }
+    
     @IBAction func addNewPlantBtn(_ sender: UIButton) {
         let alert = UIAlertController(title: "Add New Plant", message: nil, preferredStyle: .alert)
         alert.addTextField(configurationHandler: { textField in
@@ -51,7 +76,6 @@ class SavedPlantsViewController: UIViewController, UITableViewDelegate, UITableV
                 self.addToTable(name: addedName)
                 self.arrayOfPlants = self.mp!.fetchRecords()
                 self.plantTable.reloadData()
-                print("Table Reloaded")
             }
         }
         
