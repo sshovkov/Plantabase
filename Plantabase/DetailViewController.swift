@@ -21,6 +21,7 @@ class DetailViewController: UIViewController {
     
     var m:ModelShop?
     let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var arrayOfShops = [ShopListEntity]()
     
     var selectedItem:item?
     var addressString: String?
@@ -28,6 +29,8 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         m = ModelShop(context: managedObjectContext)
+        arrayOfShops = m?.fetchRecords() as! [ShopListEntity]
+        
         itemName.text = selectedItem?.itemName
         websiteButton.layer.cornerRadius = 25
         saveButton.layer.cornerRadius = 17
@@ -91,7 +94,19 @@ class DetailViewController: UIViewController {
     }
 
     @IBAction func saveButton(_ sender: Any) {
-        m?.SaveContext(name: selectedItem?.itemName ?? "Invalid Name")
+        // check if shop has already been saved
+        if arrayOfShops.contains(where: {name in name.shopName == selectedItem?.itemName} ) {
+            let alert2 = UIAlertController(title: "You have already saved this", message: nil, preferredStyle: .alert)
+            alert2.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            self.present(alert2, animated: true)
+        }
+        else {
+            m?.SaveContext(name: selectedItem?.itemName ?? "Invalid Name")
+            let alert = UIAlertController(title: "Saved!", message: nil, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            self.present(alert, animated: true)
+        }
+        
     }
     
     

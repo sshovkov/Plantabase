@@ -34,17 +34,12 @@ class CreateProfileViewController: UIViewController, UIImagePickerControllerDele
         photoPicker.delegate = self
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in }
-        
         let photoLibraryAction = UIAlertAction(title: "Photo Library", style: .default) { (action) in
-            // When clicking on edit image, present third alert to edit the image
-            photoPicker.delegate = self
             photoPicker.sourceType = .photoLibrary
             self.present (photoPicker, animated: true, completion: nil)
         }
-        
         let cameraAction = UIAlertAction(title: "Camera", style: .default) { (action) in
             if UIImagePickerController.isSourceTypeAvailable(.camera) {
-                photoPicker.delegate = self
                 photoPicker.sourceType = .camera
                 self.present (photoPicker, animated: true, completion: nil)
             } else {

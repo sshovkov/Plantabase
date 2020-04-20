@@ -8,6 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		791527A42443EE4C0006F1A0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 791527A32443EE4C0006F1A0 /* CoreLocation.framework */; };
+		792201CB244D1B390026096E /* PlantEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792201CA244D1B390026096E /* PlantEntity.swift */; };
+		792201CD244D1B670026096E /* ModelPlant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792201CC244D1B670026096E /* ModelPlant.swift */; };
+		792201D1244D26340026096E /* monstera.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 792201D0244D26340026096E /* monstera.jpg */; };
+		792201D3244D264B0026096E /* default.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 792201D2244D264B0026096E /* default.jpg */; };
+		793155DC244D2B8100569FB0 /* PlantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793155DB244D2B8100569FB0 /* PlantTableViewCell.swift */; };
+		793155E6244D318400569FB0 /* monstera2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 793155DD244D318400569FB0 /* monstera2.jpg */; };
+		793155E7244D318400569FB0 /* calathea.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 793155DE244D318400569FB0 /* calathea.jpg */; };
+		793155E8244D318400569FB0 /* pilea.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 793155DF244D318400569FB0 /* pilea.jpg */; };
+		793155E9244D318400569FB0 /* pothos.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 793155E0244D318400569FB0 /* pothos.jpg */; };
+		793155EA244D318400569FB0 /* aloe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 793155E1244D318400569FB0 /* aloe.jpg */; };
+		793155EB244D318400569FB0 /* fiddle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 793155E2244D318400569FB0 /* fiddle.jpg */; };
+		793155EC244D318400569FB0 /* snake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 793155E3244D318400569FB0 /* snake.jpg */; };
+		793155ED244D318400569FB0 /* paradise.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 793155E4244D318400569FB0 /* paradise.jpg */; };
+		793155EE244D318400569FB0 /* rubber.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 793155E5244D318400569FB0 /* rubber.jpg */; };
 		796B33472444089600B44288 /* items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796B33462444089600B44288 /* items.swift */; };
 		796B334B2444105500B44288 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796B334A2444105500B44288 /* ItemTableViewCell.swift */; };
 		796B334D2444347400B44288 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796B334C2444347400B44288 /* DetailViewController.swift */; };
@@ -43,6 +57,20 @@
 
 /* Begin PBXFileReference section */
 		791527A32443EE4C0006F1A0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		792201CA244D1B390026096E /* PlantEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantEntity.swift; sourceTree = "<group>"; };
+		792201CC244D1B670026096E /* ModelPlant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelPlant.swift; sourceTree = "<group>"; };
+		792201D0244D26340026096E /* monstera.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = monstera.jpg; path = Pictures/monstera.jpg; sourceTree = SOURCE_ROOT; };
+		792201D2244D264B0026096E /* default.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = default.jpg; path = Pictures/default.jpg; sourceTree = SOURCE_ROOT; };
+		793155DB244D2B8100569FB0 /* PlantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantTableViewCell.swift; sourceTree = "<group>"; };
+		793155DD244D318400569FB0 /* monstera2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = monstera2.jpg; path = Pictures/monstera2.jpg; sourceTree = SOURCE_ROOT; };
+		793155DE244D318400569FB0 /* calathea.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = calathea.jpg; path = Pictures/calathea.jpg; sourceTree = SOURCE_ROOT; };
+		793155DF244D318400569FB0 /* pilea.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = pilea.jpg; path = Pictures/pilea.jpg; sourceTree = SOURCE_ROOT; };
+		793155E0244D318400569FB0 /* pothos.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = pothos.jpg; path = Pictures/pothos.jpg; sourceTree = SOURCE_ROOT; };
+		793155E1244D318400569FB0 /* aloe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = aloe.jpg; path = Pictures/aloe.jpg; sourceTree = SOURCE_ROOT; };
+		793155E2244D318400569FB0 /* fiddle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = fiddle.jpg; path = Pictures/fiddle.jpg; sourceTree = SOURCE_ROOT; };
+		793155E3244D318400569FB0 /* snake.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = snake.jpg; path = Pictures/snake.jpg; sourceTree = SOURCE_ROOT; };
+		793155E4244D318400569FB0 /* paradise.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = paradise.jpg; path = Pictures/paradise.jpg; sourceTree = SOURCE_ROOT; };
+		793155E5244D318400569FB0 /* rubber.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = rubber.jpg; path = Pictures/rubber.jpg; sourceTree = SOURCE_ROOT; };
 		796B33462444089600B44288 /* items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = items.swift; sourceTree = "<group>"; };
 		796B334A2444105500B44288 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		796B334C2444347400B44288 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -130,9 +158,12 @@
 				79BD5260244557C80097F710 /* UserEntity.swift */,
 				79FDA1062449662300AEFB94 /* ModelShop.swift */,
 				79FDA1032449652100AEFB94 /* ShopListEntity.swift */,
+				792201CC244D1B670026096E /* ModelPlant.swift */,
+				792201CA244D1B390026096E /* PlantEntity.swift */,
 				796B33462444089600B44288 /* items.swift */,
 				796B334A2444105500B44288 /* ItemTableViewCell.swift */,
 				79FDA10824496EC300AEFB94 /* ProfileTableViewCell.swift */,
+				793155DB244D2B8100569FB0 /* PlantTableViewCell.swift */,
 				797B946E2426DDC900AF1311 /* Assets.xcassets */,
 				797B94702426DDC900AF1311 /* LaunchScreen.storyboard */,
 				797B94622426DDC900AF1311 /* AppDelegate.swift */,
@@ -165,6 +196,17 @@
 		79D77B632444FACC000663CD /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				793155E1244D318400569FB0 /* aloe.jpg */,
+				793155DE244D318400569FB0 /* calathea.jpg */,
+				793155E2244D318400569FB0 /* fiddle.jpg */,
+				793155DD244D318400569FB0 /* monstera2.jpg */,
+				793155E4244D318400569FB0 /* paradise.jpg */,
+				793155DF244D318400569FB0 /* pilea.jpg */,
+				793155E0244D318400569FB0 /* pothos.jpg */,
+				793155E5244D318400569FB0 /* rubber.jpg */,
+				793155E3244D318400569FB0 /* snake.jpg */,
+				792201D0244D26340026096E /* monstera.jpg */,
+				792201D2244D264B0026096E /* default.jpg */,
 				7996D7232443F7EF00284586 /* Home  Art.png */,
 				79D77B612444EFE0000663CD /* plant girl.png */,
 				797B949F2426E20E00AF1311 /* Launch Plants.png */,
@@ -234,17 +276,28 @@
 				797B94942426DFCB00AF1311 /* OpenSans-Light.ttf in Resources */,
 				797B94722426DDC900AF1311 /* LaunchScreen.storyboard in Resources */,
 				797B94962426DFCB00AF1311 /* OpenSans-ExtraBold.ttf in Resources */,
+				792201D3244D264B0026096E /* default.jpg in Resources */,
+				793155ED244D318400569FB0 /* paradise.jpg in Resources */,
+				792201D1244D26340026096E /* monstera.jpg in Resources */,
 				797B94932426DFCB00AF1311 /* OpenSans-SemiBold.ttf in Resources */,
 				797B946F2426DDC900AF1311 /* Assets.xcassets in Resources */,
+				793155EE244D318400569FB0 /* rubber.jpg in Resources */,
 				797B946A2426DDC900AF1311 /* Main.storyboard in Resources */,
 				797B949A2426DFCB00AF1311 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
+				793155EC244D318400569FB0 /* snake.jpg in Resources */,
 				797B94952426DFCB00AF1311 /* OpenSans-Italic.ttf in Resources */,
+				793155EB244D318400569FB0 /* fiddle.jpg in Resources */,
+				793155E7244D318400569FB0 /* calathea.jpg in Resources */,
 				797B94992426DFCB00AF1311 /* OpenSans-SemiBoldItalic.ttf in Resources */,
 				797B949C2426DFCB00AF1311 /* OpenSans-BoldItalic.ttf in Resources */,
 				79D77B622444EFE1000663CD /* plant girl.png in Resources */,
+				793155E8244D318400569FB0 /* pilea.jpg in Resources */,
 				797B94982426DFCB00AF1311 /* OpenSans-Bold.ttf in Resources */,
+				793155E6244D318400569FB0 /* monstera2.jpg in Resources */,
+				793155EA244D318400569FB0 /* aloe.jpg in Resources */,
 				797B949B2426DFCB00AF1311 /* OpenSans-Regular.ttf in Resources */,
 				797B94972426DFCB00AF1311 /* OpenSans-LightItalic.ttf in Resources */,
+				793155E9244D318400569FB0 /* pothos.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,8 +308,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				793155DC244D2B8100569FB0 /* PlantTableViewCell.swift in Sources */,
 				796B334D2444347400B44288 /* DetailViewController.swift in Sources */,
 				797B94672426DDC900AF1311 /* ViewController.swift in Sources */,
+				792201CB244D1B390026096E /* PlantEntity.swift in Sources */,
 				797B94632426DDC900AF1311 /* AppDelegate.swift in Sources */,
 				79BD525F244557A70097F710 /* Model.swift in Sources */,
 				796B334B2444105500B44288 /* ItemTableViewCell.swift in Sources */,
@@ -267,6 +322,7 @@
 				79FDA10924496EC300AEFB94 /* ProfileTableViewCell.swift in Sources */,
 				79FDA1052449652100AEFB94 /* ShopListEntity.swift in Sources */,
 				79BD5261244557C80097F710 /* UserEntity.swift in Sources */,
+				792201CD244D1B670026096E /* ModelPlant.swift in Sources */,
 				797B94A82426E58500AF1311 /* CreateProfileViewController.swift in Sources */,
 				79F3FE002426F4C0008A306A /* SavedPlantsViewController.swift in Sources */,
 				79FDA1072449662300AEFB94 /* ModelShop.swift in Sources */,

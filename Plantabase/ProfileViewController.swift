@@ -16,27 +16,23 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var favoritePlant: UILabel!
     @IBOutlet weak var shopCountLabel: UILabel!
-    @IBOutlet weak var plantCountLabel: UILabel!
     @IBOutlet weak var profileTable: UITableView!
+    @IBOutlet weak var myPlantsBtn: UIButton!
     
     var m:ModelShop?
     let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
-    var shopCount = 0
-    var plantCount = 0
     var arrayOfShops = [ShopListEntity]()
-    var datasourceArray = [ShopListEntity]()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let m = ModelShop(context: managedObjectContext)
-        
+        myPlantsBtn.layer.cornerRadius = 20
         userName.text = userItem?.name
         favoritePlant.text = userItem?.favePlant
         setImage()
         arrayOfShops = m.fetchRecords()
         shopCountLabel.text = String(arrayOfShops.count)
-        plantCountLabel.text = String(plantCount)
         profileTable.reloadData()
         // Do any additional setup after loading the view.
     }
